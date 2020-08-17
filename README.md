@@ -1,6 +1,6 @@
-# Affinipay 
-#### Code Assessment Exercise by Alwan Mortada
-This is my code assessment solution written in Ruby: 
+ 
+#### Code Exercise
+Solution written in Ruby: 
 
 This is built using docker, which can be built:
 ```

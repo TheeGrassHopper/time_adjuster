@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 describe TimeAdjuster do
-
   let(:time) { '09:13 AM' }
   let(:adjusted_min) { 200 }
 
@@ -16,11 +15,11 @@ describe TimeAdjuster do
   describe '#initialize' do
     context 'Argument Errors' do
       %i[time adjusted_min].each do |key|
-          context "when missing required parameter: #{key}" do
-            let(key) { nil }
+        context "when missing required parameter: #{key}" do
+          let(key) { nil }
 
-            it 'raises an Argument Error' do
-              expect { subject }.to raise_error(ArgumentError)
+          it 'raises an Argument Error' do
+            expect { subject }.to raise_error(ArgumentError)
           end
         end
       end
@@ -30,7 +29,9 @@ describe TimeAdjuster do
       let(:time) { '000:000 DD' }
 
       it 'raises error' do
-        expect { subject }.to raise_error( ArgumentError, 'Invalid time: 000:000 DD')
+        expect { subject }.to raise_error(
+          ArgumentError, 'Invalid time: 000:000 DD'
+        )
       end
     end
 
@@ -38,7 +39,9 @@ describe TimeAdjuster do
       let(:adjusted_min) { 23.22 }
 
       it 'raises error' do
-        expect { subject }.to raise_error( ArgumentError, 'Argument formate error')
+        expect { subject }.to raise_error(
+          ArgumentError, 'Argument format error'
+        )
       end
     end
 
@@ -79,4 +82,3 @@ describe TimeAdjuster do
     end
   end
 end
-

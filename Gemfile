@@ -2,5 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rspec'
 gem 'pry-byebug'
+gem 'rspec'
+gem 'rubocop-rspec'
+gem 'spring-commands-rubocop'
